@@ -1,3 +1,7 @@
+import '@/app/ui/global.css'
+import { inter } from '@/app/ui/fonts';
+
+
 export default function RootLayout({
   children,
 }: {
@@ -5,7 +9,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      {/* add font to body to be applied throught entire app */}
+      {/* I guess google fonts have className property to add to className */}
+      <body className={`${inter.className} antialiased`}>{children}</body> 
     </html>
   );
 }
